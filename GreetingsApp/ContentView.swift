@@ -34,9 +34,9 @@ struct ContentView: View {
                 // containing selected view, which I can then alter as I need
                 
                 // ^^ This is how I created these TextViews:
-                TextView(text: "M1", color: .red)
-                TextView(text: "Test", color: .green)
-                TextView(text: "Good!", color: .blue)
+                TextView(text: "M1", color: Color("red"))
+                TextView(text: "Test", color: Color("green"))
+                TextView(text: "Good!", color: Color("blue"))
                 
                 MessagesView()
                 
@@ -50,7 +50,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
+        // here we can define previews
+        // is is possible to add multiple previews
+        // they are ignored in actual compiled app
         ContentView()
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 
@@ -107,11 +112,9 @@ struct TitleView: View {
         HStack {
             VStack {
                 Text("Vítej!")
-                    .foregroundColor(Color.black)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Text(onTapSubTitles[subtitleIndex])
-                    .foregroundColor(Color.black)
                     .font(.headline)
                     .fontWeight(.thin)
                     .onTapGesture {
@@ -123,7 +126,7 @@ struct TitleView: View {
 
             Circle()
                 .strokeBorder(AngularGradient(gradient: Gradient(
-                    colors: [.blue, .red, .green, .blue]),
+                    colors: [Color("blue"), Color("red"), Color("green"), Color("blue")]),
                     center: .center,
                     angle: .zero),
                               lineWidth: 15, antialiased: true)
@@ -144,9 +147,9 @@ struct TitleView: View {
 struct MessagesView: View {
     // here are defined view models for TextViews to be rendered later
     let messages = [
-        DataItemModel(text: "Ahoj", color: .purple),
-        DataItemModel(text: "To jsem ja", color: .green),
-        DataItemModel(text: "Ondra", color: .blue)
+        DataItemModel(text: "Ahoj", color: Color("purple")),
+        DataItemModel(text: "To jsem ja", color: Color("green")),
+        DataItemModel(text: "Ondra", color: Color("blue"))
     ]
     
     // here I am adding views using cycle from list of view models
@@ -162,12 +165,12 @@ struct BackgroundView: View {
     var body: some View {
         // without ignoreSafeArea this background wouldn't cover
         // top status bar and bottom system button area
-        Color.white.ignoresSafeArea()
+        //Color.white.ignoresSafeArea()
         
-        LinearGradient(colors: [.blue, .yellow, Color(red: 139/255, green: 80/255, blue: 240/255), .green],
+        LinearGradient(colors: [Color("orange"), Color("yellow"), Color("blue"), Color("green")],
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
-        .opacity(0.2)
+        .opacity(0.5)
         .ignoresSafeArea()
     }
 }
