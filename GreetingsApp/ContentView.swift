@@ -88,17 +88,35 @@ struct TextView: View {
 struct TitleView: View {
     @State var isRotated: Bool = false
     
+//    let onTapTitles: [String] = [
+//        "Vítej!",
+//        "Greetings!",
+//        "Wilkommen!"
+//    ]
+    
+    @State var subtitleIndex: Int = 0
+    
+    let onTapSubTitles: [String] = [
+        "Toto je test.",
+        "Opravdu pouze test.",
+        "Ty mi nevěříš?",
+        "Toto není tlačítko."
+    ]
+    
     var body: some View {
         HStack {
-            VStack(spacing: 2.8) {
+            VStack {
                 Text("Vítej!")
                     .foregroundColor(Color.black)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                Text("Toto je pokus.")
+                Text(onTapSubTitles[subtitleIndex])
                     .foregroundColor(Color.black)
                     .font(.headline)
                     .fontWeight(.thin)
+                    .onTapGesture {
+                        subtitleIndex = Int.random(in: 0..<onTapSubTitles.count)
+                    }
             }.padding()
             
             Spacer()
