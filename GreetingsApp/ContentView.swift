@@ -55,7 +55,14 @@ struct ContentView_Previews: PreviewProvider {
 
 struct TextView: View {
     let text: String
-    let color: Color
+    
+    // instead of just `let color`, this needs to be `@State var color`,
+    // to allow changing color on tap
+    @State var color: Color
+    
+    let onTapColors: [Color] = [
+        .blue, .orange, .black, .green, .red, .purple, .yellow, .gray
+    ]
     
     var body: some View {
         Text(text)
@@ -66,6 +73,12 @@ struct TextView: View {
             .background(color.opacity(0.8))
             .cornerRadius(20)
             .shadow(color: color.opacity(0.4), radius: 10, x: 10, y: 10)
+            .onTapGesture {
+                // here we will pick random colour and render it on tap
+                let length = onTapColors.count
+                let randomIndex = Int.random(in: 0..<length)
+                color = onTapColors[randomIndex]
+            }
     }
 }
 
@@ -73,9 +86,11 @@ struct TitleView: View {
     var body: some View {
         VStack(spacing: 2.8) {
             Text("Vítej!")
+                .foregroundColor(Color.black)
                 .font(.largeTitle)
                 .fontWeight(.bold)
             Text("Toto je pokus.")
+                .foregroundColor(Color.black)
                 .font(.headline)
                 .fontWeight(.thin)
         }.padding()
@@ -102,7 +117,7 @@ struct BackgroundView: View {
     var body: some View {
         // without ignoreSafeArea this background wouldn't cover
         // top status bar and bottom system button area
-        // Color.black.opacity(0.5).ignoresSafeArea()
+        Color.white.ignoresSafeArea()
         
         LinearGradient(colors: [.blue, .yellow, Color(red: 139/255, green: 80/255, blue: 240/255), .green],
                        startPoint: .topLeading,
