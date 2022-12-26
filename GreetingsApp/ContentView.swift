@@ -86,17 +86,39 @@ struct TextView: View {
 
 // this view represents title and subtitle
 struct TitleView: View {
+    @State var isRotated: Bool = false
+    
     var body: some View {
-        VStack(spacing: 2.8) {
-            Text("Vítej!")
-                .foregroundColor(Color.black)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            Text("Toto je pokus.")
-                .foregroundColor(Color.black)
-                .font(.headline)
-                .fontWeight(.thin)
-        }.padding()
+        HStack {
+            VStack(spacing: 2.8) {
+                Text("Vítej!")
+                    .foregroundColor(Color.black)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                Text("Toto je pokus.")
+                    .foregroundColor(Color.black)
+                    .font(.headline)
+                    .fontWeight(.thin)
+            }.padding()
+            
+            Spacer()
+
+            Circle()
+                .strokeBorder(AngularGradient(gradient: Gradient(
+                    colors: [.blue, .red, .green, .blue]),
+                    center: .center,
+                    angle: .zero),
+                              lineWidth: 15, antialiased: true)
+                .rotationEffect(isRotated ? .zero : .degrees(90))
+                .frame(maxWidth: 70, maxHeight: 70)
+                .onTapGesture {
+                    // I have no idea how this can work, but `withAnimation` is able to antomatically
+                    // animate perhaps any changes in visual state of views!!!
+                    withAnimation {
+                        isRotated.toggle()
+                    }
+                }
+        }
     }
 }
 
