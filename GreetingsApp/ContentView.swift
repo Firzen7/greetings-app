@@ -14,6 +14,7 @@ struct DataItemModel : Identifiable {
     let color: Color
 }
 
+// main view of this screen
 struct ContentView: View {
    
     var body: some View {
@@ -53,6 +54,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+// coloured button view with rounded corners and shadow
 struct TextView: View {
     let text: String
     
@@ -82,6 +84,7 @@ struct TextView: View {
     }
 }
 
+// this view represents title and subtitle
 struct TitleView: View {
     var body: some View {
         VStack(spacing: 2.8) {
@@ -97,6 +100,7 @@ struct TitleView: View {
     }
 }
 
+// renders dynamically defined colourful TextViews
 struct MessagesView: View {
     // here are defined view models for TextViews to be rendered later
     let messages = [
@@ -113,6 +117,7 @@ struct MessagesView: View {
     }
 }
 
+// represents background with colour gradient
 struct BackgroundView: View {
     var body: some View {
         // without ignoreSafeArea this background wouldn't cover
