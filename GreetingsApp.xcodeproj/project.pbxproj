@@ -19,6 +19,8 @@
 		96892D4829631BC600C81997 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96892D4729631BC600C81997 /* TitleView.swift */; };
 		96892D4A29631BE600C81997 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96892D4929631BE600C81997 /* TextView.swift */; };
 		96892D4C29631CBB00C81997 /* DataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96892D4B29631CBB00C81997 /* DataItemModel.swift */; };
+		96892D4F2963201F00C81997 /* LandscapeGreetingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96892D4E2963201F00C81997 /* LandscapeGreetingsView.swift */; };
+		96892D5129632B5300C81997 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96892D5029632B5300C81997 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		96892D4729631BC600C81997 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		96892D4929631BE600C81997 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		96892D4B29631CBB00C81997 /* DataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemModel.swift; sourceTree = "<group>"; };
+		96892D4E2963201F00C81997 /* LandscapeGreetingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeGreetingsView.swift; sourceTree = "<group>"; };
+		96892D5029632B5300C81997 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 				96892D4D29631E2000C81997 /* views */,
 				96892D382963084300C81997 /* Launch Screen.storyboard */,
 				96644B9329535FD2008656F6 /* GreetingsApp.swift */,
+				96892D5029632B5300C81997 /* MainView.swift */,
 				96892D4B29631CBB00C81997 /* DataItemModel.swift */,
 				96644B9729535FD3008656F6 /* Assets.xcassets */,
 				96644B9929535FD3008656F6 /* GreetingsApp.entitlements */,
@@ -95,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				96644B9529535FD2008656F6 /* GreetingsView.swift */,
+				96892D4E2963201F00C81997 /* LandscapeGreetingsView.swift */,
 				96892D4929631BE600C81997 /* TextView.swift */,
 				96892D4729631BC600C81997 /* TitleView.swift */,
 				96892D4329631B2500C81997 /* BackgroundView.swift */,
@@ -179,10 +185,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				96892D4C29631CBB00C81997 /* DataItemModel.swift in Sources */,
+				96892D5129632B5300C81997 /* MainView.swift in Sources */,
 				96892D4629631B6C00C81997 /* MessagesView.swift in Sources */,
 				96892D4429631B2500C81997 /* BackgroundView.swift in Sources */,
 				96644B9629535FD2008656F6 /* GreetingsView.swift in Sources */,
 				96892D4A29631BE600C81997 /* TextView.swift in Sources */,
+				96892D4F2963201F00C81997 /* LandscapeGreetingsView.swift in Sources */,
 				96644B9429535FD2008656F6 /* GreetingsApp.swift in Sources */,
 				96892D4829631BC600C81997 /* TitleView.swift in Sources */,
 			);
