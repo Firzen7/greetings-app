@@ -11,6 +11,8 @@
 		96644B9629535FD2008656F6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96644B9529535FD2008656F6 /* ContentView.swift */; };
 		96644B9829535FD3008656F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96644B9729535FD3008656F6 /* Assets.xcassets */; };
 		96644B9C29535FD3008656F6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96644B9B29535FD3008656F6 /* Preview Assets.xcassets */; };
+		96892D2B2963071300C81997 /* app_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 96892D2A2963071300C81997 /* app_logo.png */; };
+		96892D392963084300C81997 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96892D382963084300C81997 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		96644B9729535FD3008656F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96644B9929535FD3008656F6 /* GreetingsApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GreetingsApp.entitlements; sourceTree = "<group>"; };
 		96644B9B29535FD3008656F6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96892D2A2963071300C81997 /* app_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = app_logo.png; path = ../../../../Downloads/app_logo.png; sourceTree = "<group>"; };
+		96892D382963084300C81997 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		96644B9229535FD2008656F6 /* GreetingsApp */ = {
 			isa = PBXGroup;
 			children = (
+				96892D382963084300C81997 /* Launch Screen.storyboard */,
 				96644B9329535FD2008656F6 /* GreetingsAppApp.swift */,
 				96644B9529535FD2008656F6 /* ContentView.swift */,
 				96644B9729535FD3008656F6 /* Assets.xcassets */,
@@ -65,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				96644B9B29535FD3008656F6 /* Preview Assets.xcassets */,
+				96892D2A2963071300C81997 /* app_logo.png */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -129,6 +135,8 @@
 			files = (
 				96644B9C29535FD3008656F6 /* Preview Assets.xcassets in Resources */,
 				96644B9829535FD3008656F6 /* Assets.xcassets in Resources */,
+				96892D392963084300C81997 /* Launch Screen.storyboard in Resources */,
+				96892D2B2963071300C81997 /* app_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

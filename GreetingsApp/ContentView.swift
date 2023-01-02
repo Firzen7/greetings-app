@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-// has to inherit from Identifiable so that we can use ForEach below
+// Has to inherit from Identifiable so that we can use ForEach below
+/// This is the data model of the coloured buttons.
+/// It contains a text string and a colour.
+/// Inherits from Identifiable
 struct DataItemModel : Identifiable {
     var id = UUID()   // this is neccessary when extending type Identifiable
     let text: String
     let color: Color
 }
 
-// main view of this screen
+/// Main view of this screen
 struct ContentView: View {
    
     var body: some View {
@@ -59,7 +62,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-// coloured button view with rounded corners and shadow
+/// Coloured button view with rounded corners and shadow
 struct TextView: View {
     let text: String
     
@@ -89,7 +92,9 @@ struct TextView: View {
     }
 }
 
-// this view represents title and subtitle
+/// This view represents title and subtitle.
+/// Subtitle can be changed by tapping
+/// Also contains colourful circle that rotates on tap
 struct TitleView: View {
     @State var isRotated: Bool = false
     
@@ -143,7 +148,7 @@ struct TitleView: View {
     }
 }
 
-// renders dynamically defined colourful TextViews
+/// Renders dynamically defined colourful TextViews
 struct MessagesView: View {
     // here are defined view models for TextViews to be rendered later
     let messages = [
@@ -160,7 +165,8 @@ struct MessagesView: View {
     }
 }
 
-// represents background with colour gradient
+// Three slashes (/) are documentation comments visible using Option (Alt) + click
+/// Represents background with colour gradient
 struct BackgroundView: View {
     var body: some View {
         // without ignoreSafeArea this background wouldn't cover
