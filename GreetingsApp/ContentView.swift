@@ -153,9 +153,9 @@ struct TitleView: View {
 struct MessagesView: View {
     // here are defined view models for TextViews to be rendered later
     let messages = [
-        DataItemModel(text: "Hi", color: Color("purple")),
-        DataItemModel(text: "This is me", color: Color("green")),
-        DataItemModel(text: "Andrew", color: Color("blue"))
+        DataItemModel(text: LocalizedStringKey("Hi"), color: Color("purple")),
+        DataItemModel(text: LocalizedStringKey("This is me"), color: Color("green")),
+        DataItemModel(text: LocalizedStringKey("Andrew"), color: Color("blue"))
     ]
     
     // here I am adding views using cycle from list of view models
