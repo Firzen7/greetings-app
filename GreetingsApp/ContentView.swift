@@ -13,7 +13,7 @@ import SwiftUI
 /// Inherits from Identifiable
 struct DataItemModel : Identifiable {
     var id = UUID()   // this is neccessary when extending type Identifiable
-    let text: String
+    let text: LocalizedStringKey
     let color: Color
 }
 
@@ -37,9 +37,9 @@ struct ContentView: View {
                 // containing selected view, which I can then alter as I need
                 
                 // ^^ This is how I created these TextViews:
-                TextView(text: "M1", color: Color("red"))
-                TextView(text: "Test", color: Color("green"))
-                TextView(text: "Good!", color: Color("blue"))
+                TextView(text: LocalizedStringKey("M1"), color: Color("red"))
+                TextView(text: LocalizedStringKey("Test"), color: Color("green"))
+                TextView(text: LocalizedStringKey("Good!"), color: Color("blue"))
                 
                 MessagesView()
                 
@@ -64,7 +64,7 @@ struct ContentView_Previews: PreviewProvider {
 
 /// Coloured button view with rounded corners and shadow
 struct TextView: View {
-    let text: String
+    let text: LocalizedStringKey
     
     // instead of just `let color`, this needs to be `@State var color`,
     // to allow changing color on tap
@@ -106,17 +106,18 @@ struct TitleView: View {
     
     @State var subtitleIndex: Int = 0
     
-    let onTapSubTitles: [String] = [
-        "Toto je test.",
-        "Opravdu pouze test.",
-        "Ty mi nevěříš?",
-        "Toto není tlačítko."
+    // String had to be changed to LocalizedStringKey for localized messages
+    let onTapSubTitles: [LocalizedStringKey] = [
+        LocalizedStringKey("This is a test."),
+        LocalizedStringKey("Really just a test."),
+        LocalizedStringKey("You don't believe me?"),
+        LocalizedStringKey("This is not a button.")
     ]
     
     var body: some View {
         HStack {
             VStack {
-                Text("Vítej!")
+                Text(LocalizedStringKey("Greetings!"))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 Text(onTapSubTitles[subtitleIndex])
@@ -152,9 +153,9 @@ struct TitleView: View {
 struct MessagesView: View {
     // here are defined view models for TextViews to be rendered later
     let messages = [
-        DataItemModel(text: "Ahoj", color: Color("purple")),
-        DataItemModel(text: "To jsem ja", color: Color("green")),
-        DataItemModel(text: "Ondra", color: Color("blue"))
+        DataItemModel(text: "Hi", color: Color("purple")),
+        DataItemModel(text: "This is me", color: Color("green")),
+        DataItemModel(text: "Andrew", color: Color("blue"))
     ]
     
     // here I am adding views using cycle from list of view models
