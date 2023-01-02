@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// Main view of this screen
-struct ContentView: View {
+struct GreetingsView: View {
    
     var body: some View {
         ZStack {
@@ -46,8 +46,8 @@ struct ContentView_Previews: PreviewProvider {
         // here we can define previews
         // is is possible to add multiple previews
         // they are ignored in actual compiled app
-        ContentView()
-        ContentView()
+        GreetingsView()
+        GreetingsView()
             .preferredColorScheme(.dark)
     }
 }
