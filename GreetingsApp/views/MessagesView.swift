@@ -16,6 +16,7 @@ struct MessagesView: View {
         DataItemModel(text: LocalizedStringKey("Andrew"), color: Color("blue"))
     ]
     
+
     // here I am adding views using cycle from list of view models
     var body: some View {
         ForEach(messages, content: { item in

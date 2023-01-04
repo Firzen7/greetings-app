@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: this is a bookmark visible in Xcode navigation
 struct MainView: View {
     // environment variables access syntax
     // in var we can name the variable as we wish
@@ -30,6 +31,7 @@ struct MainView: View {
     }
 }
 
+// TODO: todos with doubledot will be visible in Xcode navigation
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
